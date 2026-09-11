@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Guía móvil del V Congreso Cardiocete 2026 · Albacete, 11–12 de septiembre">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-title" content="Cardiocete">
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Cardiocete 2026</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#E0334B">
+<style>
+:root{
+  --bg:#F3F0F2;
+  --bg2:#EDE7EA;
+  --ink:#1C1C1E;
+  --ink2:#5F5B60;
+  --ink3:#8E8993;
+  --line:rgba(28,28,30,.08);
+  --glass:rgba(255,255,255,.62);
+  --glass2:rgba(255,255,255,.78);
+  --glass-strong:rgba(255,255,255,.86);
+  --glass-border:rgba(255,255,255,.65);
+  --shadow:0 10px 30px -12px rgba(60,30,40,.22), 0 1px 0 rgba(255,255,255,.7) inset;
+  --accent:#E0334B;
+  --accent-soft:rgba(224,51,75,.12);
+  --accent-ink:#B31F35;
+  --blue:#2F6FE4;
+  --blue-soft:rgba(47,111,228,.12);
+  --gold:#C98A1A;
+  --gold-soft:rgba(201,138,26,.14);
+  --green:#2E9C6A;
+  --green-soft:rgba(46,156,106,.13);
+  --violet:#7E5BD6;
+  --violet-soft:rgba(126,91,214,.13);
+  --fill:rgba(28,28,30,.05);
+  --fill2:rgba(28,28,30,.09);
+  --blob1:#FFB4BE;
+  --blob2:#FFD9C2;
+  --blob3:#D9CDF7;
+  --blob4:#BFE3F5;
+  --tab-bg:rgba(255,255,255,.72);
+  --sheet:rgba(250,248,250,.92);
+  --now:#E0334B;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B0B10; --bg2:#12111A;
+    --ink:#F5F5F7; --ink2:#B4B1BA; --ink3:#7E7A86;
+    --line:rgba(255,255,255,.09);
+    --glass:rgba(34,33,42,.58); --glass2:rgba(40,39,50,.72); --glass-strong:rgba(44,43,56,.86);
+    --glass-border:rgba(255,255,255,.10);
+    --shadow:0 14px 34px -14px rgba(0,0,0,.6), 0 1px 0 rgba(255,255,255,.06) inset;
+    --accent:#FF5C6E; --accent-soft:rgba(255,92,110,.16); --accent-ink:#FF7A88;
+    --blue:#6B9CFF; --blue-soft:rgba(107,156,255,.16);
+    --gold:#E4B04A; --gold-soft:rgba(228,176,74,.16);
+    --green:#4FC48F; --green-soft:rgba(79,196,143,.15);
+    --violet:#A88BFF; --violet-soft:rgba(168,139,255,.16);
+    --fill:rgba(255,255,255,.07); --fill2:rgba(255,255,255,.12);
+    --blob1:#7A2233; --blob2:#5A3A2A; --blob3:#33285C; --blob4:#1F3A4A;
+    --tab-bg:rgba(20,20,26,.72); --sheet:rgba(24,23,30,.94); --now:#FF5C6E;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B0B10; --bg2:#12111A;
+  --ink:#F5F5F7; --ink2:#B4B1BA; --ink3:#7E7A86;
+  --line:rgba(255,255,255,.09);
+  --glass:rgba(34,33,42,.58); --glass2:rgba(40,39,50,.72); --glass-strong:rgba(44,43,56,.86);
+  --glass-border:rgba(255,255,255,.10);
+  --shadow:0 14px 34px -14px rgba(0,0,0,.6), 0 1px 0 rgba(255,255,255,.06) inset;
+  --accent:#FF5C6E; --accent-soft:rgba(255,92,110,.16); --accent-ink:#FF7A88;
+  --blue:#6B9CFF; --blue-soft:rgba(107,156,255,.16);
+  --gold:#E4B04A; --gold-soft:rgba(228,176,74,.16);
+  --green:#4FC48F; --green-soft:rgba(79,196,143,.15);
+  --violet:#A88BFF; --violet-soft:rgba(168,139,255,.16);
+  --fill:rgba(255,255,255,.07); --fill2:rgba(255,255,255,.12);
+  --blob1:#7A2233; --blob2:#5A3A2A; --blob3:#33285C; --blob4:#1F3A4A;
+  --tab-bg:rgba(20,20,26,.72); --sheet:rgba(24,23,30,.94); --now:#FF5C6E;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{
+  margin:0;min-height:100%;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Helvetica Neue",Helvetica,Roboto,Segoe UI,Arial,sans-serif;
+  font-size:15px;line-height:1.4;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+a{color:var(--blue);text-decoration:none}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:8px}
+
+/* ambient background */
+.bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.85;will-change:transform}
+.b1{width:60vmax;height:60vmax;left:-20vmax;top:-18vmax;background:var(--blob1);animation:drift1 26s ease-in-out infinite alternate}
+.b2{width:50vmax;height:50vmax;right:-22vmax;top:8vh;background:var(--blob2);animation:drift2 32s ease-in-out infinite alternate}
+.b3{width:55vmax;height:55vmax;left:-10vmax;bottom:-25vmax;background:var(--blob3);animation:drift3 30s ease-in-out infinite alternate}
+.b4{width:40vmax;height:40vmax;right:-10vmax;bottom:-10vmax;background:var(--blob4);animation:drift1 38s ease-in-out infinite alternate-reverse}
+@keyframes drift1{to{transform:translate(8vmax,6vmax) scale(1.08)}}
+@keyframes drift2{to{transform:translate(-9vmax,9vmax) scale(1.05)}}
+@keyframes drift3{to{transform:translate(10vmax,-8vmax) scale(1.1)}}
+@media (prefers-reduced-motion: reduce){.blob{animation:none!important}*{transition:none!important}}
+
+/* app shell */
+.app{position:relative;z-index:1;max-width:640px;margin:0 auto;min-height:100vh;
+  padding:0 16px calc(96px + env(safe-area-inset-bottom,0px));}
+.topbar{position:sticky;top:0;z-index:20;margin:0 -16px;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;
+  background:var(--tab-bg);backdrop-filter:blur(24px) saturate(1.8);-webkit-backdrop-filter:blur(24px) saturate(1.8);
+  border-bottom:1px solid var(--line);}
+.topbar .kicker{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:6px}
+.topbar h1{margin:2px 0 0;font-size:32px;line-height:1.1;font-weight:800;letter-spacing:-.025em;text-wrap:balance}
+.topbar .sub{color:var(--ink2);font-size:14px;margin-top:4px}
+
+.glass{background:var(--glass);backdrop-filter:blur(22px) saturate(1.7);-webkit-backdrop-filter:blur(22px) saturate(1.7);
+  border:1px solid var(--glass-border);box-shadow:var(--shadow);border-radius:20px}
+.card{padding:16px}
+.stack{display:flex;flex-direction:column;gap:12px}
+.section{margin-top:22px}
+.section-title{display:flex;align-items:baseline;justify-content:space-between;margin:0 4px 10px}
+.section-title h2{margin:0;font-size:20px;font-weight:700;letter-spacing:-.015em}
+.section-title .meta{font-size:13px;color:var(--ink3)}
+
+/* segmented */
+.seg{display:flex;padding:3px;border-radius:14px;background:var(--fill2);gap:2px}
+.seg button{flex:1;padding:8px 6px;border-radius:11px;font-weight:600;font-size:14px;color:var(--ink2);transition:background .2s,color .2s,box-shadow .2s}
+.seg button[aria-pressed="true"]{background:var(--glass-strong);color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.seg small{display:block;font-weight:500;font-size:11px;color:var(--ink3);margin-top:1px}
+.seg button[aria-pressed="true"] small{color:var(--ink2)}
+.toolbar{display:flex;gap:8px;align-items:center;margin-top:10px}
+.toolbar .seg{flex:1}
+.chip-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 12px;border-radius:12px;background:var(--fill2);font-weight:600;font-size:13px;color:var(--ink2);white-space:nowrap}
+.chip-btn[aria-pressed="true"]{background:var(--accent);color:#fff}
+
+/* now card */
+.now{position:relative;overflow:hidden;padding:16px;border-radius:22px;color:#fff;
+  background:linear-gradient(135deg,#E0334B 0%,#C22344 60%,#8B1E4A 100%);box-shadow:0 14px 32px -12px rgba(224,51,75,.55)}
+.now .lbl{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.92}
+.now .dot{width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 9px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.now h3{margin:8px 0 4px;font-size:19px;line-height:1.25;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+.now p{margin:0;font-size:14px;opacity:.9}
+.now .next{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.28);font-size:13px;opacity:.95}
+.now .next b{font-weight:700}
+.now .heart{position:absolute;right:-18px;top:-22px;width:130px;height:130px;opacity:.16}
+
+/* agenda */
+.block{overflow:hidden}
+.block-head{padding:14px 16px 10px;border-bottom:1px solid var(--line)}
+.block-head .time{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--accent);font-variant-numeric:tabular-nums}
+.block-head h3{margin:3px 0 0;font-size:17px;line-height:1.3;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+.block-head .kind{display:inline-block;margin-right:6px;font-size:11px;font-weight:700;padding:2px 7px;border-radius:6px;background:var(--fill2);color:var(--ink2);vertical-align:2px;letter-spacing:.03em}
+.people{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 9px 4px 5px;border-radius:999px;background:var(--fill);font-size:12px;color:var(--ink2);max-width:100%}
+.pill .av{width:18px;height:18px;border-radius:50%;font-size:9px;font-weight:700;color:#fff;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.pill .r{font-weight:700;color:var(--ink3);font-size:10px;letter-spacing:.04em;text-transform:uppercase}
+.pill span.n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sess{display:grid;grid-template-columns:54px 1fr 36px;gap:10px;align-items:start;padding:12px 12px 12px 16px;border-bottom:1px solid var(--line);text-align:left;width:100%;position:relative;transition:background .15s}
+.sess:last-child{border-bottom:0}
+.sess:active{background:var(--fill)}
+.sess .t{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink2);padding-top:2px;line-height:1.2}
+.sess .t small{display:block;font-weight:500;color:var(--ink3);font-size:11px}
+.sess .ti{font-size:15px;font-weight:600;line-height:1.3;letter-spacing:-.005em}
+.sess .sp{margin-top:4px;font-size:13px;color:var(--ink2);line-height:1.35}
+.sess .sp b{font-weight:600;color:var(--ink)}
+.sess.live::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;border-radius:0 3px 3px 0;background:var(--now)}
+.sess.live .t{color:var(--now)}
+.sess.past{opacity:.62}
+.star{width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--ink3);margin-top:-4px;transition:transform .15s}
+.star svg{width:20px;height:20px}
+.star[aria-pressed="true"]{color:var(--gold)}
+.star:active{transform:scale(1.2)}
+.plain{display:flex;align-items:center;gap:12px;padding:12px 14px}
+.plain .ic{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none;font-size:18px}
+.plain .t{font-size:13px;font-weight:700;color:var(--ink2);font-variant-numeric:tabular-nums;min-width:52px}
+.plain .ti{font-weight:600;font-size:15px}
+.plain .ti small{display:block;font-weight:400;color:var(--ink2);font-size:13px}
+.empty{padding:28px 16px;text-align:center;color:var(--ink2)}
+.empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
+
+/* search + list */
+.search{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:14px;background:var(--fill2)}
+.search input{flex:1;border:0;background:none;font:inherit;font-size:16px;color:var(--ink);outline:none;min-width:0}
+.search input::placeholder{color:var(--ink3)}
+.search svg{width:18px;height:18px;color:var(--ink3);flex:none}
+.row{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--line);width:100%;text-align:left}
+.row:last-child{border-bottom:0}
+.row:active{background:var(--fill)}
+.av-lg{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;letter-spacing:.02em}
+.row .n{font-weight:600;font-size:15px;line-height:1.25}
+.row .o{font-size:13px;color:var(--ink2);margin-top:2px;line-height:1.3}
+.row .c{font-size:12px;color:var(--ink3);font-weight:600;background:var(--fill);padding:3px 8px;border-radius:999px;white-space:nowrap}
+.filters{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 6px;margin:10px -2px 0;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filters .chip-btn{padding:7px 11px;font-size:12px}
+
+/* info rows */
+.irow{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line);color:inherit}
+.irow:last-child{border-bottom:0}
+.irow .ic{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px}
+.irow .l{font-size:12px;color:var(--ink3);font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+.irow .v{font-size:15px;font-weight:600;line-height:1.3;word-break:break-word}
+.irow .v small{display:block;font-weight:400;color:var(--ink2);font-size:13px;margin-top:1px}
+.irow .go{color:var(--ink3);font-size:18px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-size:12px;font-weight:600;padding:5px 9px;border-radius:9px;background:var(--fill)}
+.ic.red{background:var(--accent-soft);color:var(--accent-ink)}
+.ic.blue{background:var(--blue-soft);color:var(--blue)}
+.ic.gold{background:var(--gold-soft);color:var(--gold)}
+.ic.green{background:var(--green-soft);color:var(--green)}
+.ic.violet{background:var(--violet-soft);color:var(--violet)}
+.ic.grey{background:var(--fill2);color:var(--ink2)}
+
+.hero{position:relative;overflow:hidden;padding:18px 16px}
+.hero .eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.hero h3{margin:6px 0 4px;font-size:24px;line-height:1.15;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.hero p{margin:0;color:var(--ink2);font-size:14px}
+.hero .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.stat{padding:10px 10px;border-radius:14px;background:var(--fill)}
+.stat b{display:block;font-size:20px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+.stat span{font-size:11px;color:var(--ink3);font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+.prose{font-size:15px;line-height:1.5;color:var(--ink)}
+.prose p{margin:0 0 10px}
+.prose p:last-child{margin-bottom:0}
+.prose b{font-weight:650}
+.table{width:100%;border-collapse:collapse;font-size:13.5px}
+.table th{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink3);text-align:left;padding:10px 12px 6px;border-bottom:1px solid var(--line)}
+.table td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.table tr:last-child td{border-bottom:0}
+.table td.d{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.table td.d small{display:block;font-weight:500;color:var(--ink3);font-size:11px}
+.table tr.hl td{background:var(--accent-soft)}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:5px;letter-spacing:.03em;text-transform:uppercase}
+.tag.free{background:var(--green-soft);color:var(--green)}
+.tag.pay{background:var(--fill2);color:var(--ink2)}
+.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.event{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line);align-items:start}
+.event:last-child{border-bottom:0}
+.event .t{font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;color:var(--accent);padding-top:2px}
+.event .ti{font-weight:600;font-size:15px;line-height:1.3}
+.event .w{font-size:13px;color:var(--ink2);margin-top:2px}
+.event .w a{font-weight:600}
+.place{display:grid;grid-template-columns:1fr auto;gap:12px;padding:13px 14px;border-bottom:1px solid var(--line);align-items:center}
+.place:last-child{border-bottom:0}
+.place .n{font-weight:650;font-size:15px}
+.place .d{font-size:13px;color:var(--ink2);margin-top:2px;line-height:1.4}
+.place .k{display:inline-block;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px}
+.map-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:var(--blue-soft);color:var(--blue);font-size:18px;flex:none}
+.map-btn.sm{width:34px;height:34px;font-size:15px;border-radius:10px}
+.note{font-size:12.5px;color:var(--ink3);line-height:1.45;margin:8px 6px 0}
+.note a{color:var(--ink2);text-decoration:underline}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:14px;font-weight:600;font-size:15px;background:var(--fill2);color:var(--ink)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.btn-row .btn{width:100%}
+
+/* tab bar */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;justify-content:center;padding:0 12px calc(10px + env(safe-area-inset-bottom,0px))}
+.tabbar-inner{width:100%;max-width:560px;display:flex;justify-content:space-around;padding:8px 4px 6px;border-radius:26px;
+  background:var(--tab-bg);backdrop-filter:blur(26px) saturate(1.8);-webkit-backdrop-filter:blur(26px) saturate(1.8);
+  border:1px solid var(--glass-border);box-shadow:0 12px 34px -10px rgba(0,0,0,.28)}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px 8px;border-radius:14px;color:var(--ink3);font-size:10.5px;font-weight:600;letter-spacing:.01em;min-width:56px;transition:color .2s}
+.tab svg{width:24px;height:24px}
+.tab[aria-selected="true"]{color:var(--accent)}
+
+/* sheet */
+.sheet-bd{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(2px)}
+.sheet-bd.open{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:41;max-width:640px;margin:0 auto;max-height:88vh;overflow:auto;
+  background:var(--sheet);backdrop-filter:blur(30px) saturate(1.8);-webkit-backdrop-filter:blur(30px) saturate(1.8);
+  border-radius:26px 26px 0 0;border:1px solid var(--glass-border);border-bottom:0;box-shadow:0 -10px 40px rgba(0,0,0,.25);
+  transform:translateY(105%);transition:transform .32s cubic-bezier(.32,.72,0,1);padding:8px 18px calc(24px + env(safe-area-inset-bottom,0px))}
+.sheet.open{transform:translateY(0)}
+.handle{width:38px;height:5px;border-radius:3px;background:var(--fill2);margin:4px auto 14px}
+.sheet .k{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.sheet h3{margin:6px 0 6px;font-size:21px;line-height:1.25;font-weight:750;letter-spacing:-.015em;text-wrap:balance}
+.sheet .m{color:var(--ink2);font-size:14px}
+.sheet .grp{margin-top:16px}
+.sheet .grp h4{margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3)}
+.sheet .prow{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.sheet .prow:last-child{border-bottom:0}
+.sheet .prow .n{font-weight:600;font-size:15px}
+.sheet .prow .o{font-size:13px;color:var(--ink2)}
+.sheet .prow .rr{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.05em;text-transform:uppercase}
+.sheet .srow{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);width:100%;text-align:left}
+.sheet .srow:last-child{border-bottom:0}
+.sheet .srow .t{font-weight:700;font-variant-numeric:tabular-nums;font-size:13px;color:var(--ink2)}
+.sheet .srow .t small{display:block;font-weight:600;color:var(--accent);font-size:11px}
+.sheet .srow .ti{font-weight:600;font-size:15px;line-height:1.3}
+.sheet .srow .ro{font-size:12px;color:var(--ink3);margin-top:2px;font-weight:600}
+.toast{position:fixed;left:50%;bottom:calc(100px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);z-index:50;
+  background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:14px;font-size:14px;font-weight:600;opacity:0;transition:all .25s;pointer-events:none;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.fade{animation:fade .28s ease-out}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+
+<div class="bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></div>
+
+<div class="app">
+  <header class="topbar" id="topbar"></header>
+  <main id="view"></main>
+</div>
+
+<nav class="tabbar" aria-label="Secciones">
+  <div class="tabbar-inner" role="tablist" id="tabs"></div>
+</nav>
+
+<div class="sheet-bd" id="sheetBd"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ============ DATA: PROGRAMA CIENTÍFICO (fuente: programa oficial Cardiocete 2026) ============ */
+const DAYS=[{id:'vie',d:'2026-09-11',label:'Viernes',short:'Vie',num:'11'},{id:'sab',d:'2026-09-12',label:'Sábado',short:'Sáb',num:'12'}];
+// persona: 'Nombre|Centro'
+const P={
+  salmeron:'Dr. Francisco Salmerón|Complejo Hospitalario Universitario de Albacete',
+  jorge:'Dr. Pablo Jorge|Complejo Hospitalario Universitario de Canarias, Tenerife',
+  guerra:'D. Néstor Guerra|NCompany · IA e innovación',
+  viana:'Dra. Ana Viana|Hospital Clínico Universitario San Carlos, Madrid',
+  andrea:'Dra. Rut Andrea|Hospital Clínic, Barcelona',
+  rmartin:'Dr. Roberto Martín|Hospital Universitario 12 de Octubre, Madrid',
+  alvarez:'Dra. María Álvarez Nájera|Hospital Universitario La Paz, Madrid',
+  arbas:'Dr. Emilio Arbas Redondo|Hospital Universitario La Paz, Madrid',
+  agallardo:'Dr. Andrés Gallardo|Hospital General Universitario Gregorio Marañón, Madrid',
+  juarez:'Dra. Miriam Juárez|Hospital General Universitario Gregorio Marañón, Madrid',
+  corbi:'Dr. Miguel Corbí|Complejo Hospitalario Universitario de Albacete',
+  losas:'Dr. Pedro Martínez Losas|Hospital Universitario Infanta Leonor, Madrid',
+  escudier:'Dr. Juan Manuel Escudier|Hospital Universitario Puerta de Hierro-Majadahonda, Madrid',
+  ines:'Inés García|Centro Nacional de Investigaciones Cardiovasculares (CNIC)',
+  raposeiras:'Dr. Sergio Raposeiras|Hospital Álvaro Cunqueiro, Vigo',
+  mazuecos:'Dr. Jesús Jiménez Mazuecos|Complejo Hospitalario Universitario de Albacete',
+  moreiras:'Dr. Javier Martín Moreiras|Hospital Clínico Universitario de Salamanca',
+  moreu:'Dr. José Moreu|Hospital Universitario de Toledo',
+  ojeda:'Dra. Soledad Ojeda|Hospital Universitario Reina Sofía, Córdoba',
+  delatorre:'Dr. José María de la Torre|Hospital Universitario Marqués de Valdecilla, Santander',
+  camilo:'Dr. José Abel Camilo|Hospital Universitario de Bellvitge, Barcelona',
+  romaguera:'Dr. Rafael Romaguera|Hospital Universitario de Bellvitge, Barcelona',
+  valentin:'Dr. Pablo Valentín|Complejo Hospitalario Universitario de Albacete',
+  estevez:'Dr. Rodrigo Estévez-Loureiro|Hospital Universitario Álvaro Cunqueiro, Vigo',
+  diez:'Dr. Felipe Díez del Hoyo|Hospital Universitario 12 de Octubre, Madrid',
+  arsenio:'Dr. Arsenio Gallardo|Complejo Hospitalario Universitario de Albacete',
+  cordoba:'Dr. Juan Gabriel Córdoba|Complejo Hospitalario Universitario de Albacete',
+  jurado:'Dr. Alfonso Jurado|Hospital Universitario La Paz, Madrid',
+  carrillo:'Dra. Pilar Carrillo|Hospital Universitario Virgen de la Arrixaca, Murcia',
+  isanchez:'Dr. Ignacio Sánchez|Hospital Universitario de Ciudad Real',
+  oteo:'Dr. Juan Francisco Oteo|Hospital Universitario Puerta de Hierro-Majadahonda, Madrid',
+  ramon:'Dra. Laura Ramón Roldán|Hospital General Dr. Balmis, Alicante',
+  nodar:'Dr. Juan Miguel Ruiz Nodar|Hospital General Dr. Balmis, Alicante',
+  nerea:'Dra. Nerea Fernández Ortiz|Hospital Universitario La Fe, Valencia',
+  sanz:'Dr. Jorge Sanz|Hospital Universitario La Fe, Valencia',
+  vicente:'Dra. Ana Rodríguez Vicente|Hospital Universitario de La Princesa, Madrid',
+  bastante:'Dra. Teresa Bastante|Hospital Universitario de La Princesa, Madrid',
+  hidalgo:'Dr. Víctor Hidalgo|Complejo Hospitalario Universitario de Albacete',
+  lozanoI:'Dr. Ignacio Fernández Lozano|Hospital Universitario Puerta de Hierro-Majadahonda, Madrid',
+  lozanoC:'Dra. Cristina Lozano|Hospital Universitario Ramón y Cajal, Madrid',
+  salar:'Dra. María Eladia Salar|Hospital Clínico Universitario Virgen de la Arrixaca, Murcia',
+  laguia:'Dra. Lidia Laguía|Complejo Hospitalario Universitario de Albacete',
+  briongos:'Dr. Sem Briongos|Hospital Universitario Infanta Leonor, Madrid',
+  palonso:'Dr. Pablo Rodríguez Alonso|Hospital Universitario 12 de Octubre, Madrid',
+  drodriguez:'Dr. Daniel Rodríguez|Hospital Universitario 12 de Octubre, Madrid',
+  redrojo:'Dra. Lucía Moreno de Redrojo|Hospital Universitario de Salamanca',
+  candil:'Dr. Javier Jiménez Candil|Hospital Universitario de Salamanca',
+  simon:'Dr. Miguel Ángel Simón|Complejo Hospitalario Universitario de Albacete',
+  torres:'Dr. Javier Torres|Hospital Universitario de Jaén',
+  segura:'Dr. Diego Segura|Hospital Universitario San Cecilio, Granada',
+  gimeno:'Dr. Juan Ramón Gimeno|Hospital Universitario Virgen de la Arrixaca, Murcia',
+  cobo:'Dra. Marta Cobo|Hospital Universitario Puerta de Hierro-Majadahonda, Madrid',
+  cardona:'Salvador Cardona|Hospital Clínico Universitario, Valencia',
+  nunez:'Dr. Julio Núñez|Hospital Clínico Universitario, Valencia',
+  neyra:'Dra. Isabel López Neyra|Complejo Hospitalario Universitario de Albacete',
+  matute:'Dra. Lucía Matute|Hospital Universitario Ramón y Cajal, Madrid',
+  anguita:'Dr. Manuel Anguita|Hospital Universitario Reina Sofía, Córdoba',
+  pecci:'Dr. Jesús Pecci|Hospital Universitario Virgen del Rocío, Sevilla',
+  olmo:'Dra. Rosa Fernández del Olmo|Hospital Universitario Virgen del Rocío, Sevilla',
+  castro:'Dra. Almudena Castro|Hospital Universitario La Paz, Madrid',
+  aguilera:'Dra. Paula Sánchez-Aguilera|Complejo Hospitalario Universitario de Albacete',
+  ramos:'Dra. Raquel Ramos|Hospital Clínico Universitario de Valladolid',
+};
+// roles: mod (moderador), pan (panelista), exp (experto), pon (ponente), caso (presentación de caso)
+const PROGRAM=[
+ {day:'vie',type:'plain',id:'v0',s:'16:45',e:'17:00',title:'Inauguración por autoridades',icon:'🎗️',color:'red'},
+ {day:'vie',type:'block',id:'vA',s:'17:00',e:'17:30',kind:'Mesa',title:'Cuidados críticos cardiológicos. El futuro ya está aquí',
+  roles:{mod:['salmeron','jorge']},
+  sessions:[{id:'v1',s:'17:00',e:'17:30',title:'Inteligencia artificial, nuevas tecnologías e innovaciones futuras en cuidados críticos',roles:{pon:['guerra']}}]},
+ {day:'vie',type:'block',id:'vB',s:'17:30',e:'18:30',kind:'Mesa',title:'Shock cardiogénico y parada cardíaca: qué hay de nuevo',
+  roles:{mod:['salmeron'],pan:['viana','andrea']},
+  sessions:[
+   {id:'v2',s:'17:30',e:'17:50',title:'Guías RCP 2025: revolución o evolución',roles:{pon:['rmartin']}},
+   {id:'v3',s:'17:50',e:'18:10',title:'Shock cardiogénico: de los fármacos a utilizar a la elección del SMC ideal. Lecciones aprendidas',roles:{caso:['alvarez'],pon:['arbas']}},
+   {id:'v4',s:'18:10',e:'18:30',title:'Miocarditis fulminante: los pasos a seguir desde la sospecha diagnóstica al tratamiento adecuado',roles:{caso:['agallardo'],pon:['juarez']}}]},
+ {day:'vie',type:'block',id:'vC',s:'18:30',e:'19:00',kind:'Café con el experto',title:'De la investigación básica a la cardiología clínica: estudios made in Spain que cambian la práctica clínica',
+  roles:{mod:['corbi'],pan:['losas','escudier'],exp:['ines','raposeiras']},sessions:[]},
+ {day:'vie',type:'block',id:'vD',s:'19:00',e:'20:30',kind:'Mesa',title:'Intervencionismo en el paciente de la UCIC. Más allá del SCA',
+  roles:{mod:['mazuecos','moreiras'],pan:['moreu','ojeda','delatorre']},
+  sessions:[
+   {id:'v5',s:'19:00',e:'19:20',title:'Paciente con fallo de TAVI. ¿Y ahora qué? ¿Qué debo mirar? ¿Qué prótesis elegir? ¿Qué debo hacer distinto?',roles:{caso:['camilo'],exp:['romaguera']}},
+   {id:'v6',s:'19:20',e:'19:40',title:'Paciente con IM severa candidato a reparación percutánea, FA y alto riesgo de sangrado. ¿Y si le damos solución a todo?',roles:{caso:['valentin'],exp:['estevez']}},
+   {id:'v7',s:'19:40',e:'20:00',title:'Angioplastia de alto riesgo. Cuándo usar un dispositivo de asistencia y cuál prefiero',roles:{exp:['diez']}},
+   {id:'v8',s:'20:00',e:'20:20',title:'Tromboembolismo pulmonar: ¿cómo iniciar un «Código TEP»? ¿En qué pacientes? ¿Qué necesito?',roles:{exp:['arsenio']}}]},
+ {day:'vie',type:'plain',id:'v9',s:'20:20',e:'20:30',title:'Cierre de la jornada',icon:'🌙',color:'violet'},
+
+ {day:'sab',type:'block',id:'sA',s:'09:00',e:'10:00',kind:'Mesa',title:'Síndrome coronario agudo',
+  roles:{mod:['cordoba','jurado'],pan:['carrillo','isanchez','oteo']},
+  sessions:[
+   {id:'s1',s:'09:00',e:'09:15',title:'Angioplastia primaria: ¿tiene que ir más allá de la elevación del ST?',roles:{caso:['ramon'],exp:['nodar']}},
+   {id:'s2',s:'09:15',e:'09:30',title:'Angioplastia del IAMCEST: ¿es necesario implantar un stent siempre?',roles:{caso:['nerea'],exp:['sanz']}},
+   {id:'s3',s:'09:30',e:'09:45',title:'¿Qué aporta la imagen intracoronaria en el síndrome coronario agudo? ¿Qué buscar? ¿En quién? ¿Qué hacer?',roles:{caso:['vicente'],exp:['bastante']}},
+   {id:'s4',s:'09:45',e:'10:00',title:'Discusión',roles:{}}]},
+ {day:'sab',type:'block',id:'sB',s:'10:00',e:'11:10',kind:'Mesa',title:'Pesadillas arritmogénicas, explícamelo fácil',
+  roles:{mod:['hidalgo','lozanoI'],pan:['lozanoC','salar']},
+  sessions:[
+   {id:'s5',s:'10:00',e:'10:20',title:'Más allá del DAI transvenoso: ¿qué dispositivo elegir en 2026?',roles:{caso:['laguia'],exp:['briongos']}},
+   {id:'s6',s:'10:20',e:'10:40',title:'Tormenta eléctrica: del manejo farmacológico a los nuevos sistemas de ablación. ¿Hemos acabado con las recurrencias?',roles:{caso:['palonso'],exp:['drodriguez']}},
+   {id:'s7',s:'10:40',e:'11:00',title:'Código marcapasos: el valor de la guardia localizada en el implante de dispositivos',roles:{caso:['redrojo'],exp:['candil']}}]},
+ {day:'sab',type:'plain',id:'s8',s:'11:10',e:'11:30',title:'Pausa café',icon:'☕',color:'gold'},
+ {day:'sab',type:'block',id:'sC',s:'11:30',e:'12:45',kind:'Mesa',title:'Insuficiencia cardíaca aguda',
+  roles:{mod:['simon','torres','segura']},
+  sessions:[
+   {id:'s9',s:'11:30',e:'11:50',title:'Viejas enfermedades pero con manejo 2.0: amiloidosis y MCHO. Explícamelo fácil',roles:{pon:['gimeno']}},
+   {id:'s10',s:'11:50',e:'12:10',title:'Nuevas guías, nuevas oportunidades. Cuéntame lo importante',roles:{pon:['cobo']}},
+   {id:'s11',s:'12:10',e:'12:30',title:'El decálogo del manejo en el paciente cardiorrenal… Lo que no puedes olvidar',roles:{caso:['cardona'],pon:['nunez']}},
+   {id:'s12',s:'12:30',e:'12:45',title:'Discusión',roles:{}}]},
+ {day:'sab',type:'block',id:'sD',s:'12:45',e:'14:00',kind:'Mesa',title:'Y cuando el paciente se va de alta… Cuidados post-SCA',
+  roles:{mod:['neyra','matute','anguita']},
+  sessions:[
+   {id:'s13',s:'12:45',e:'13:05',title:'LDL, triglicéridos y algo más. La idea es alcanzar el riesgo vascular cero',roles:{caso:['pecci'],pon:['olmo']}},
+   {id:'s14',s:'13:05',e:'13:25',title:'Inflamación, diabesidad. Todo lo que el cardiólogo debe saber. Explícame el mejor manejo…',roles:{pon:['castro']}},
+   {id:'s15',s:'13:25',e:'13:45',title:'Innovaciones farmacológicas en el horizonte: moléculas emergentes en cardiología',roles:{pon:['raposeiras']}},
+   {id:'s16',s:'13:45',e:'14:00',title:'Conclusiones de la jornada de mañana',roles:{}}]},
+ {day:'sab',type:'plain',id:'s17',s:'14:00',e:'15:30',title:'Comida de trabajo',sub:'Incluida en la inscripción',icon:'🍽️',color:'green'},
+ {day:'sab',type:'block',id:'sE',s:'15:30',e:'19:00',kind:'Concurso',title:'Concurso de casos clínicos',
+  roles:{mod:['simon','aguilera','ramos']},sessions:[]},
+ {day:'sab',type:'plain',id:'s18',s:'19:00',e:'19:30',title:'Conclusiones de las jornadas y acto de clausura',icon:'🏁',color:'red'},
+ {day:'sab',type:'plain',id:'s19',s:'21:30',e:'23:59',title:'Cena de clausura',sub:'Incluida en la inscripción · lugar por confirmar con la organización',icon:'🥂',color:'violet'},
+];
+const ROLE_LABEL={mod:'Moderador/a',pan:'Panelista',exp:'Experto/a',pon:'Ponente',caso:'Presentación de caso'};
+const ROLE_SHORT={mod:'Mod',pan:'Panel',exp:'Experto',pon:'Ponente',caso:'Caso'};
+
+/* ============ DATA: SEDE E INFO PRÁCTICA (fuente: congresocardiocete.es / programa SEC) ============ */
+const VENUE={name:'Salón de actos Unicaja',addr:'C/ San José de Calasanz, s/n · 02002 Albacete',lat:38.990397,lng:-1.856486};
+const HOTELS=[
+ {n:'Hotel Los Llanos',stars:'4★',addr:'Avda. de España, 9 · 02002 Albacete',tel:'967223750',web:'https://www.hotellosllanos.com/'},
+ {n:'Gran Hotel Albacete',stars:'4★',addr:'C/ Marqués de Molins, 1 · 02001 Albacete',tel:'967193333',web:'https://www.granhotelalbacete.es/'},
+ {n:'Hotel Universidad',stars:'3★',addr:'Avda. de España, 71 · 02006 Albacete',tel:'967508895',web:'https://www.hoteluniversidad.es/'},
+ {n:'Hotel Europa',stars:'3★',addr:'C/ San Antonio, 39 · 02001 Albacete',tel:'967241512',web:'https://www.hoteleuropaalbacete.com/'},
+];
+const SPONSORS=['Medtronic','Abbott Vascular','Quilmedical','SMT','Atrial Medica','Terumo','Recordati','Teleflex','Boehringer Ingelheim','Daiichi Sankyo'];
+const SUPPORT=['CHUA · Servicio de Cardiología','Fundación BIOTYC','SESCAM','Ayuntamiento de Albacete','Unicaja'];
+const COMMITTEE=[
+ ['Dr. Jesús Jiménez Mazuecos','Hemodinámica y Cardiología Intervencionista'],
+ ['Dr. Miguel Corbí Pascual','Cuidados Agudos Cardiológicos'],
+ ['Dr. Juan Gabriel Córdoba Soriano','Hemodinámica'],
+ ['Dr. Víctor Manuel Hidalgo Olivares','Arritmias'],
+ ['Dr. Francisco Salmerón Martínez','Cardiología'],
+ ['Dr. Miguel Ángel Simón García','Cardiología'],
+ ['Dra. Isabel López Neyra','Cardiología'],
+ ['Agustín Ortega Cerrato','Presidente Fundación BIOTYC'],
+];
+
+/* ============ DATA: FERIA DE ALBACETE 2026 (7–17 sept) ============ */
+const FERIA_DAYS=[
+ {d:'Viernes 11',date:'2026-09-11',ev:[
+   {t:'18:00',ti:'Corrida de toros',w:'Talavante, Roca Rey y Samuel Navalón · Plaza de Toros (entradas: plazatorosalbacete.com)'},
+   {t:'18:30',ti:'Musical «La Bella Durmiente»',w:'Teatro de la Paz'},
+   {t:'20:30',ti:'Magia «Nada es lo que parece»',w:'Teatro Circo'},
+   {t:'21:00',ti:'La Feria en los Barrios',w:'Conciertos gratuitos en escenarios de barrio'},
+   {t:'21:30',ti:'DJ Symphonic & Royal Film Concert Orchestra',w:'Caseta de los Jardinillos · con entrada'},
+   {t:'22:00',ti:'Festival Indispensables (6 bandas)',w:'Carpa VIVA (CEIP Feria–Isabel Bonal) · gratuito'}]},
+ {d:'Sábado 12',date:'2026-09-12',ev:[
+   {t:'Mañana',ti:'Vaquillas populares',w:'Plaza de Toros · tradición de cada mañana de Feria'},
+   {t:'18:00',ti:'Corrida de toros',w:'Morante de la Puebla, Paco Ureña y Borja Jiménez · Plaza de Toros'},
+   {t:'18:00',ti:'Magia',w:'Teatro Circo'},
+   {t:'20:00',ti:'Festival Poetas del Rock (7 bandas)',w:'Carpa VIVA · con entrada'},
+   {t:'20:30',ti:'Teatro «GOOL»',w:'Teatro de la Paz'},
+   {t:'21:30',ti:'Los Chunguitos',w:'Caseta de los Jardinillos · con entrada'},
+   {t:'22:00',ti:'Dani Martín',w:'Estadio Municipal José Copete · el concierto grande de la Feria'},
+   {t:'Noche',ti:'XV Ronda de los Redondeles',w:'Recinto Ferial · ambiente en las casetas de los Redondeles'}]},
+ {d:'Domingo 13',date:'2026-09-13',ev:[
+   {t:'11:30',ti:'Ofrenda de Flores a la Virgen de los Llanos',w:'Desde la Catedral hasta el Recinto Ferial · la mañana más bonita de la Feria'},
+   {t:'18:00',ti:'Corrida de rejones',w:'Rui Fernandes, Diego Ventura y Leonardo Hernández · Plaza de Toros'},
+   {t:'18:30',ti:'«Bichitos»',w:'Teatro de la Paz'},
+   {t:'20:00',ti:'Juan Magán + Poppy García',w:'Carpa VIVA · con entrada'},
+   {t:'21:30',ti:'Camela + Diego Martínez',w:'Caseta de los Jardinillos · con entrada'}]},
+];
+const CONCERTS=[
+ ['7','23:30','Malú','Jardinillos','pay'],['7','23:00','Lia Kali + Iseo & Dodosound + Luna','Carpa VIVA','pay'],
+ ['8','20:00','Chambao + Bebe + Aldhara','Jardinillos','pay'],['8','20:00','La Flamenca + Flamenquito & Urban Hits','Carpa VIVA','free'],
+ ['9','20:00','Taburete + Indiego','Jardinillos','pay'],['9','20:30','Porretas (30 aniversario) + Barrizal + Temécula','Carpa VIVA','free'],
+ ['10','22:00','Marta Santos','Jardinillos','pay'],['10','20:30','Viva Suecia','Carpa VIVA','pay'],
+ ['11','21:30','DJ Symphonic & Royal Film Concert Orchestra','Jardinillos','pay'],['11','22:00','Festival Indispensables','Carpa VIVA','free'],
+ ['12','21:30','Los Chunguitos','Jardinillos','pay'],['12','20:00','Poetas del Rock','Carpa VIVA','pay'],['12','22:00','Dani Martín','Estadio José Copete','pay'],
+ ['13','21:30','Camela + Diego Martínez','Jardinillos','pay'],['13','20:00','Juan Magán + Poppy García','Carpa VIVA','pay'],
+ ['14','22:30','Orquesta Estrella Central','Jardinillos','pay'],['14','19:30','Celtas Cortos + The Cañas con los Papas + Full Gas','Carpa VIVA','free'],
+ ['15','21:30','El Arrebato','Jardinillos','pay'],['15','19:30','Extremopuro + Stormy Thursdays + Barrigada','Carpa VIVA','free'],
+ ['16','21:30','Rosario Mohedano y Carlos Barbas','Jardinillos','free'],['16','20:00','Urban 40 Principales','Carpa VIVA','pay'],
+];
+
+/* ============ DATA: ALBACETE ============ */
+const SIGHTS=[
+ {k:'Imprescindible',n:'Recinto Ferial «La Sartén»',d:'Circular, de 1783 y único en España. Puerta de Hierros, los Redondeles con sus casetas, el templete y la ermita de la Virgen de los Llanos. En Feria es el centro de todo.',q:'Recinto Ferial de Albacete'},
+ {k:'Centro',n:'Catedral de San Juan Bautista',d:'Gótico tardío con torre inacabada, en la plaza de la Virgen de los Llanos, a un paso de la sede del congreso. De aquí sale la Ofrenda de Flores.',q:'Catedral de Albacete'},
+ {k:'Modernismo',n:'Pasaje de Lodares',d:'Galería comercial modernista de 1925 entre Mayor y Tinte, con vidrieras y esculturas. Foto obligada y tiendas a cubierto.',q:'Pasaje de Lodares Albacete'},
+ {k:'Museo',n:'Museo Municipal de la Cuchillería',d:'En la Casa de Hortelano (frente a la Catedral). Navajas, cuchillos y la historia del oficio que define la ciudad. Perfecto para una hora suelta.',q:'Museo de la Cuchillería Albacete'},
+ {k:'Paseo',n:'Parque Abelardo Sánchez y Museo de Albacete',d:'El gran pulmón de la ciudad. Dentro, el Museo de Albacete con las muñecas articuladas romanas de Ontur. En Feria acoge la Feria del Niño.',q:'Parque Abelardo Sánchez Albacete'},
+ {k:'Historia',n:'Posada del Rosario',d:'Posada del siglo XVI con patio manchego. Hoy oficina de turismo: buen sitio para pillar el plano oficial de la Feria.',q:'Posada del Rosario Albacete'},
+ {k:'Plaza',n:'Plaza del Altozano y calle Ancha',d:'El corazón comercial. Terrazas, el edificio del Ayuntamiento antiguo y la calle Tesifonte Gallego («la Ancha») para pasear.',q:'Plaza del Altozano Albacete'},
+ {k:'Teatro',n:'Teatro Circo',d:'Uno de los pocos teatros-circo que quedan en Europa (1887). Programación especial durante la Feria.',q:'Teatro Circo Albacete'},
+];
+const FOOD=[
+ {n:'Nuestro Bar',d:'Cocina manchega de referencia: gazpacho manchego, atascaburras, gachas. Un clásico para llevar a los de fuera.',q:'Restaurante Nuestro Bar Albacete'},
+ {n:'El Callejón',d:'Taberna taurina con historia, muy ambientada en Feria. Tapas y raciones; ideal tras la sesión de tarde.',q:'Restaurante El Callejón Albacete'},
+ {n:'Asador Concepción',d:'Cocina de producto y brasas, algo más formal. Buena opción para una cena tranquila de equipo.',q:'Asador Concepción Albacete'},
+ {n:'Don Gil',d:'Cocina de mercado actualizada en el centro. Menú y carta cuidados.',q:'Restaurante Don Gil Albacete'},
+ {n:'Casetas de los Redondeles',d:'En Feria, la ruta de tapeo es dentro del Recinto: casetas de peñas y asociaciones con raciones, cuerva y zurra.',q:'Recinto Ferial de Albacete'},
+];
+const TYPICAL=[['Gazpacho manchego','Guiso de caza con torta cenceña. El plato de la Feria.'],['Atascaburras','Puré de patata, bacalao y aceite. Contundente y perfecto.'],['Miguelitos de La Roda','Hojaldre con crema. Se venden en puestos por todo el Recinto.'],['Queso manchego','Curado, con un vino de Almansa o Jumilla.'],['Cuerva y zurra','Las bebidas de Feria: vino con fruta y limonada. Suaves… hasta que no lo son.']];
+
+const QR_W=37;const QR_PATH='M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM8 0h1v1h-1zM10 0h1v1h-1zM12 0h1v1h-1zM15 0h1v1h-1zM19 0h1v1h-1zM20 0h1v1h-1zM21 0h1v1h-1zM22 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM28 0h1v1h-1zM30 0h1v1h-1zM31 0h1v1h-1zM32 0h1v1h-1zM33 0h1v1h-1zM34 0h1v1h-1zM35 0h1v1h-1zM36 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM11 1h1v1h-1zM13 1h1v1h-1zM15 1h1v1h-1zM16 1h1v1h-1zM17 1h1v1h-1zM18 1h1v1h-1zM19 1h1v1h-1zM21 1h1v1h-1zM22 1h1v1h-1zM25 1h1v1h-1zM26 1h1v1h-1zM27 1h1v1h-1zM28 1h1v1h-1zM30 1h1v1h-1zM36 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM10 2h1v1h-1zM16 2h1v1h-1zM17 2h1v1h-1zM18 2h1v1h-1zM21 2h1v1h-1zM24 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM30 2h1v1h-1zM32 2h1v1h-1zM33 2h1v1h-1zM34 2h1v1h-1zM36 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM12 3h1v1h-1zM13 3h1v1h-1zM15 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM19 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM27 3h1v1h-1zM30 3h1v1h-1zM32 3h1v1h-1zM33 3h1v1h-1zM34 3h1v1h-1zM36 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM9 4h1v1h-1zM11 4h1v1h-1zM16 4h1v1h-1zM17 4h1v1h-1zM19 4h1v1h-1zM20 4h1v1h-1zM21 4h1v1h-1zM23 4h1v1h-1zM24 4h1v1h-1zM30 4h1v1h-1zM32 4h1v1h-1zM33 4h1v1h-1zM34 4h1v1h-1zM36 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM10 5h1v1h-1zM12 5h1v1h-1zM15 5h1v1h-1zM19 5h1v1h-1zM27 5h1v1h-1zM28 5h1v1h-1zM30 5h1v1h-1zM36 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h1v1h-1zM28 6h1v1h-1zM30 6h1v1h-1zM31 6h1v1h-1zM32 6h1v1h-1zM33 6h1v1h-1zM34 6h1v1h-1zM35 6h1v1h-1zM36 6h1v1h-1zM9 7h1v1h-1zM14 7h1v1h-1zM16 7h1v1h-1zM17 7h1v1h-1zM18 7h1v1h-1zM19 7h1v1h-1zM21 7h1v1h-1zM26 7h1v1h-1zM28 7h1v1h-1zM1 8h1v1h-1zM2 8h1v1h-1zM3 8h1v1h-1zM4 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM10 8h1v1h-1zM11 8h1v1h-1zM13 8h1v1h-1zM14 8h1v1h-1zM15 8h1v1h-1zM17 8h1v1h-1zM18 8h1v1h-1zM24 8h1v1h-1zM31 8h1v1h-1zM32 8h1v1h-1zM36 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM2 9h1v1h-1zM4 9h1v1h-1zM7 9h1v1h-1zM9 9h1v1h-1zM11 9h1v1h-1zM12 9h1v1h-1zM13 9h1v1h-1zM16 9h1v1h-1zM19 9h1v1h-1zM21 9h1v1h-1zM23 9h1v1h-1zM25 9h1v1h-1zM26 9h1v1h-1zM27 9h1v1h-1zM28 9h1v1h-1zM29 9h1v1h-1zM30 9h1v1h-1zM2 10h1v1h-1zM4 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM8 10h1v1h-1zM10 10h1v1h-1zM11 10h1v1h-1zM13 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM19 10h1v1h-1zM21 10h1v1h-1zM25 10h1v1h-1zM26 10h1v1h-1zM30 10h1v1h-1zM31 10h1v1h-1zM33 10h1v1h-1zM36 10h1v1h-1zM1 11h1v1h-1zM3 11h1v1h-1zM4 11h1v1h-1zM7 11h1v1h-1zM8 11h1v1h-1zM10 11h1v1h-1zM12 11h1v1h-1zM13 11h1v1h-1zM17 11h1v1h-1zM21 11h1v1h-1zM26 11h1v1h-1zM28 11h1v1h-1zM30 11h1v1h-1zM34 11h1v1h-1zM35 11h1v1h-1zM3 12h1v1h-1zM6 12h1v1h-1zM10 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM17 12h1v1h-1zM18 12h1v1h-1zM20 12h1v1h-1zM25 12h1v1h-1zM26 12h1v1h-1zM29 12h1v1h-1zM30 12h1v1h-1zM31 12h1v1h-1zM32 12h1v1h-1zM33 12h1v1h-1zM34 12h1v1h-1zM35 12h1v1h-1zM0 13h1v1h-1zM2 13h1v1h-1zM3 13h1v1h-1zM4 13h1v1h-1zM5 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM18 13h1v1h-1zM20 13h1v1h-1zM22 13h1v1h-1zM23 13h1v1h-1zM25 13h1v1h-1zM28 13h1v1h-1zM29 13h1v1h-1zM31 13h1v1h-1zM33 13h1v1h-1zM34 13h1v1h-1zM35 13h1v1h-1zM0 14h1v1h-1zM1 14h1v1h-1zM2 14h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM5 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM10 14h1v1h-1zM11 14h1v1h-1zM12 14h1v1h-1zM15 14h1v1h-1zM16 14h1v1h-1zM19 14h1v1h-1zM20 14h1v1h-1zM22 14h1v1h-1zM27 14h1v1h-1zM28 14h1v1h-1zM30 14h1v1h-1zM31 14h1v1h-1zM33 14h1v1h-1zM35 14h1v1h-1zM36 14h1v1h-1zM1 15h1v1h-1zM2 15h1v1h-1zM4 15h1v1h-1zM5 15h1v1h-1zM10 15h1v1h-1zM13 15h1v1h-1zM15 15h1v1h-1zM17 15h1v1h-1zM18 15h1v1h-1zM23 15h1v1h-1zM24 15h1v1h-1zM26 15h1v1h-1zM27 15h1v1h-1zM35 15h1v1h-1zM2 16h1v1h-1zM6 16h1v1h-1zM7 16h1v1h-1zM8 16h1v1h-1zM11 16h1v1h-1zM13 16h1v1h-1zM17 16h1v1h-1zM21 16h1v1h-1zM22 16h1v1h-1zM24 16h1v1h-1zM25 16h1v1h-1zM26 16h1v1h-1zM29 16h1v1h-1zM30 16h1v1h-1zM31 16h1v1h-1zM32 16h1v1h-1zM34 16h1v1h-1zM35 16h1v1h-1zM36 16h1v1h-1zM1 17h1v1h-1zM2 17h1v1h-1zM3 17h1v1h-1zM5 17h1v1h-1zM7 17h1v1h-1zM8 17h1v1h-1zM9 17h1v1h-1zM11 17h1v1h-1zM13 17h1v1h-1zM14 17h1v1h-1zM17 17h1v1h-1zM20 17h1v1h-1zM26 17h1v1h-1zM28 17h1v1h-1zM31 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM2 18h1v1h-1zM5 18h1v1h-1zM6 18h1v1h-1zM15 18h1v1h-1zM16 18h1v1h-1zM19 18h1v1h-1zM20 18h1v1h-1zM22 18h1v1h-1zM23 18h1v1h-1zM24 18h1v1h-1zM25 18h1v1h-1zM27 18h1v1h-1zM30 18h1v1h-1zM32 18h1v1h-1zM35 18h1v1h-1zM36 18h1v1h-1zM1 19h1v1h-1zM3 19h1v1h-1zM4 19h1v1h-1zM5 19h1v1h-1zM9 19h1v1h-1zM10 19h1v1h-1zM14 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM17 19h1v1h-1zM18 19h1v1h-1zM20 19h1v1h-1zM21 19h1v1h-1zM22 19h1v1h-1zM23 19h1v1h-1zM26 19h1v1h-1zM28 19h1v1h-1zM35 19h1v1h-1zM36 19h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM6 20h1v1h-1zM8 20h1v1h-1zM10 20h1v1h-1zM11 20h1v1h-1zM12 20h1v1h-1zM16 20h1v1h-1zM20 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM25 20h1v1h-1zM26 20h1v1h-1zM29 20h1v1h-1zM30 20h1v1h-1zM31 20h1v1h-1zM32 20h1v1h-1zM33 20h1v1h-1zM34 20h1v1h-1zM1 21h1v1h-1zM2 21h1v1h-1zM4 21h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM11 21h1v1h-1zM13 21h1v1h-1zM15 21h1v1h-1zM16 21h1v1h-1zM17 21h1v1h-1zM20 21h1v1h-1zM22 21h1v1h-1zM23 21h1v1h-1zM25 21h1v1h-1zM31 21h1v1h-1zM34 21h1v1h-1zM36 21h1v1h-1zM2 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM9 22h1v1h-1zM11 22h1v1h-1zM14 22h1v1h-1zM18 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM27 22h1v1h-1zM29 22h1v1h-1zM34 22h1v1h-1zM35 22h1v1h-1zM36 22h1v1h-1zM0 23h1v1h-1zM1 23h1v1h-1zM2 23h1v1h-1zM7 23h1v1h-1zM8 23h1v1h-1zM9 23h1v1h-1zM12 23h1v1h-1zM13 23h1v1h-1zM16 23h1v1h-1zM19 23h1v1h-1zM21 23h1v1h-1zM25 23h1v1h-1zM31 23h1v1h-1zM36 23h1v1h-1zM0 24h1v1h-1zM1 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM8 24h1v1h-1zM10 24h1v1h-1zM15 24h1v1h-1zM16 24h1v1h-1zM18 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM22 24h1v1h-1zM26 24h1v1h-1zM28 24h1v1h-1zM29 24h1v1h-1zM33 24h1v1h-1zM34 24h1v1h-1zM36 24h1v1h-1zM0 25h1v1h-1zM1 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM5 25h1v1h-1zM7 25h1v1h-1zM8 25h1v1h-1zM9 25h1v1h-1zM10 25h1v1h-1zM11 25h1v1h-1zM12 25h1v1h-1zM13 25h1v1h-1zM16 25h1v1h-1zM17 25h1v1h-1zM21 25h1v1h-1zM23 25h1v1h-1zM25 25h1v1h-1zM27 25h1v1h-1zM30 25h1v1h-1zM31 25h1v1h-1zM32 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM6 26h1v1h-1zM8 26h1v1h-1zM10 26h1v1h-1zM11 26h1v1h-1zM15 26h1v1h-1zM16 26h1v1h-1zM17 26h1v1h-1zM18 26h1v1h-1zM19 26h1v1h-1zM20 26h1v1h-1zM22 26h1v1h-1zM24 26h1v1h-1zM25 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM28 26h1v1h-1zM30 26h1v1h-1zM32 26h1v1h-1zM33 26h1v1h-1zM35 26h1v1h-1zM36 26h1v1h-1zM0 27h1v1h-1zM2 27h1v1h-1zM3 27h1v1h-1zM4 27h1v1h-1zM7 27h1v1h-1zM8 27h1v1h-1zM9 27h1v1h-1zM10 27h1v1h-1zM11 27h1v1h-1zM13 27h1v1h-1zM14 27h1v1h-1zM15 27h1v1h-1zM16 27h1v1h-1zM19 27h1v1h-1zM20 27h1v1h-1zM21 27h1v1h-1zM22 27h1v1h-1zM24 27h1v1h-1zM27 27h1v1h-1zM29 27h1v1h-1zM31 27h1v1h-1zM32 27h1v1h-1zM33 27h1v1h-1zM35 27h1v1h-1zM36 27h1v1h-1zM0 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM6 28h1v1h-1zM7 28h1v1h-1zM11 28h1v1h-1zM12 28h1v1h-1zM19 28h1v1h-1zM23 28h1v1h-1zM25 28h1v1h-1zM26 28h1v1h-1zM27 28h1v1h-1zM28 28h1v1h-1zM29 28h1v1h-1zM30 28h1v1h-1zM31 28h1v1h-1zM32 28h1v1h-1zM33 28h1v1h-1zM8 29h1v1h-1zM9 29h1v1h-1zM12 29h1v1h-1zM16 29h1v1h-1zM17 29h1v1h-1zM19 29h1v1h-1zM20 29h1v1h-1zM21 29h1v1h-1zM22 29h1v1h-1zM23 29h1v1h-1zM27 29h1v1h-1zM28 29h1v1h-1zM32 29h1v1h-1zM0 30h1v1h-1zM1 30h1v1h-1zM2 30h1v1h-1zM3 30h1v1h-1zM4 30h1v1h-1zM5 30h1v1h-1zM6 30h1v1h-1zM8 30h1v1h-1zM9 30h1v1h-1zM12 30h1v1h-1zM13 30h1v1h-1zM16 30h1v1h-1zM18 30h1v1h-1zM20 30h1v1h-1zM21 30h1v1h-1zM26 30h1v1h-1zM28 30h1v1h-1zM30 30h1v1h-1zM32 30h1v1h-1zM33 30h1v1h-1zM35 30h1v1h-1zM36 30h1v1h-1zM0 31h1v1h-1zM6 31h1v1h-1zM8 31h1v1h-1zM10 31h1v1h-1zM11 31h1v1h-1zM17 31h1v1h-1zM18 31h1v1h-1zM19 31h1v1h-1zM20 31h1v1h-1zM21 31h1v1h-1zM22 31h1v1h-1zM28 31h1v1h-1zM32 31h1v1h-1zM0 32h1v1h-1zM2 32h1v1h-1zM3 32h1v1h-1zM4 32h1v1h-1zM6 32h1v1h-1zM8 32h1v1h-1zM9 32h1v1h-1zM11 32h1v1h-1zM13 32h1v1h-1zM15 32h1v1h-1zM16 32h1v1h-1zM18 32h1v1h-1zM19 32h1v1h-1zM21 32h1v1h-1zM25 32h1v1h-1zM26 32h1v1h-1zM27 32h1v1h-1zM28 32h1v1h-1zM29 32h1v1h-1zM30 32h1v1h-1zM31 32h1v1h-1zM32 32h1v1h-1zM34 32h1v1h-1zM36 32h1v1h-1zM0 33h1v1h-1zM2 33h1v1h-1zM3 33h1v1h-1zM4 33h1v1h-1zM6 33h1v1h-1zM8 33h1v1h-1zM9 33h1v1h-1zM11 33h1v1h-1zM14 33h1v1h-1zM18 33h1v1h-1zM20 33h1v1h-1zM21 33h1v1h-1zM22 33h1v1h-1zM24 33h1v1h-1zM27 33h1v1h-1zM30 33h1v1h-1zM32 33h1v1h-1zM0 34h1v1h-1zM2 34h1v1h-1zM3 34h1v1h-1zM4 34h1v1h-1zM6 34h1v1h-1zM8 34h1v1h-1zM10 34h1v1h-1zM11 34h1v1h-1zM12 34h1v1h-1zM14 34h1v1h-1zM16 34h1v1h-1zM18 34h1v1h-1zM19 34h1v1h-1zM22 34h1v1h-1zM26 34h1v1h-1zM29 34h1v1h-1zM31 34h1v1h-1zM36 34h1v1h-1zM0 35h1v1h-1zM6 35h1v1h-1zM8 35h1v1h-1zM11 35h1v1h-1zM13 35h1v1h-1zM14 35h1v1h-1zM17 35h1v1h-1zM18 35h1v1h-1zM19 35h1v1h-1zM20 35h1v1h-1zM21 35h1v1h-1zM22 35h1v1h-1zM24 35h1v1h-1zM26 35h1v1h-1zM27 35h1v1h-1zM28 35h1v1h-1zM30 35h1v1h-1zM31 35h1v1h-1zM32 35h1v1h-1zM36 35h1v1h-1zM0 36h1v1h-1zM1 36h1v1h-1zM2 36h1v1h-1zM3 36h1v1h-1zM4 36h1v1h-1zM5 36h1v1h-1zM6 36h1v1h-1zM9 36h1v1h-1zM11 36h1v1h-1zM12 36h1v1h-1zM14 36h1v1h-1zM15 36h1v1h-1zM17 36h1v1h-1zM18 36h1v1h-1zM19 36h1v1h-1zM21 36h1v1h-1zM25 36h1v1h-1zM26 36h1v1h-1zM27 36h1v1h-1zM29 36h1v1h-1zM30 36h1v1h-1zM34 36h1v1h-1zM35 36h1v1h-1zM36 36h1v1h-1z';const APP_URL='https://nestorguerra.github.io/cardiocete-2026/';
+/* ============ STATE & HELPERS ============ */
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let favs=new Set(); try{favs=new Set(JSON.parse(localStorage.getItem('cc26.favs')||'[]'))}catch(e){}
+function saveFavs(){try{localStorage.setItem('cc26.favs',JSON.stringify([...favs]))}catch(e){}}
+let state={tab:'agenda',day:null,onlyFavs:false,q:'',pf:'Todos'};
+try{const t=localStorage.getItem('cc26.tab'); if(t) state.tab=t;}catch(e){}
+
+function madridNow(){ // fecha/hora actual en Europe/Madrid
+  const s=new Date().toLocaleString('sv-SE',{timeZone:'Europe/Madrid',hour12:false});
+  const [d,t]=s.split(' '); return {date:d,time:t.slice(0,5),min:+t.slice(0,2)*60+ +t.slice(3,5)};
+}
+const toMin=t=>+t.slice(0,2)*60+ +t.slice(3,5);
+function todayDay(){const n=madridNow();return DAYS.find(x=>x.d===n.date)||null}
+if(!state.day){const td=todayDay(); state.day=td?td.id:(madridNow().date>'2026-09-12'?'sab':'vie');}
+function person(id){const [n,o]=P[id].split('|');return {id,n,o}}
+function initials(n){return n.replace(/^(Dr\.|Dra\.|D\.|Dña\.)\s*/,'').normalize('NFD').replace(/[̀-ͯ]/g,'').split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase()}
+const AVC=['#E0334B','#2F6FE4','#7E5BD6','#2E9C6A','#C98A1A','#D9556B','#3B8EA5','#8E5BA0'];
+function avColor(n){let h=0;for(const c of n)h=(h*31+c.charCodeAt(0))>>>0;return AVC[h%AVC.length]}
+function mapsQ(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
+function gcal(title,date,s,e,details,loc){
+  const z=(d,t)=>{const dt=new Date(`${d}T${t}:00+02:00`);return dt.toISOString().replace(/[-:]|\.\d{3}/g,'')};
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(title)+'&dates='+z(date,s)+'/'+z(date,e)+'&details='+encodeURIComponent(details)+'&location='+encodeURIComponent(loc)+'&ctz=Europe/Madrid';
+}
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1600)}
+
+// índice de sesiones "planas" (todas las intervenciones con horario) y de ponentes
+const ALL=[];
+PROGRAM.forEach(b=>{
+  if(b.type==='plain'){ALL.push({...b,block:null});return}
+  if(!b.sessions.length) ALL.push({id:b.id,day:b.day,s:b.s,e:b.e,title:b.title,roles:b.roles,block:b,isBlock:true});
+  b.sessions.forEach(x=>ALL.push({...x,day:b.day,block:b}));
+});
+const SPEAKERS={};
+function addRole(pid,role,ref){(SPEAKERS[pid]??={...person(pid),items:[]}).items.push({role,...ref})}
+PROGRAM.forEach(b=>{ if(b.type!=='block')return;
+  Object.entries(b.roles||{}).forEach(([r,ids])=>ids.forEach(id=>addRole(id,r,{day:b.day,s:b.s,e:b.e,title:b.title,sid:b.id,block:true})));
+  b.sessions.forEach(x=>Object.entries(x.roles||{}).forEach(([r,ids])=>ids.forEach(id=>addRole(id,r,{day:b.day,s:x.s,e:x.e,title:x.title,sid:x.id}))));
+});
+const SPEAKER_LIST=Object.values(SPEAKERS).sort((a,b)=>a.n.replace(/^(Dr\.|Dra\.|D\.)\s*/,'').localeCompare(b.n.replace(/^(Dr\.|Dra\.|D\.)\s*/,''),'es'));
+const CITY=o=>{const m=o.match(/,\s*([^,]+)$/);if(m)return m[1].trim();if(/Albacete/.test(o))return 'Albacete';if(/CNIC/.test(o))return 'Madrid';if(/Bellvitge/.test(o))return 'Barcelona';return 'Otros'};
+const CITIES=['Todos',...[...new Set(SPEAKER_LIST.map(s=>CITY(s.o)))].sort((a,b)=>a.localeCompare(b,'es'))];
+
+/* ============ ICONS ============ */
+const I={
+ agenda:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="4"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8 15h3" /></svg>',
+ people:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.6c2.9 0 5 1.6 5.5 4.9"/></svg>',
+ feria:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v5.3M12 15.2v5.3M3.5 12h5.3M15.2 12h5.3M6 6l3.7 3.7M14.3 14.3 18 18M18 6l-3.7 3.7M9.7 14.3 6 18"/></svg>',
+ city:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.5-5.6 6.5-11A6.5 6.5 0 0 0 5.5 10c0 5.4 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>',
+ info:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>',
+ star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8l2.7 5.8 6.3.8-4.6 4.4 1.2 6.3L12 17l-5.6 3.1 1.2-6.3L3 9.4l6.3-.8z"/></svg>',
+ starO:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.8l2.7 5.8 6.3.8-4.6 4.4 1.2 6.3L12 17l-5.6 3.1 1.2-6.3L3 9.4l6.3-.8z"/></svg>',
+ search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
+ heart:'<svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 88C30 72 10 56 10 36 10 24 19 14 31 14c8 0 15 5 19 12 4-7 11-12 19-12 12 0 21 10 21 22 0 20-20 36-40 52z"/></svg>'
+};
+const TABS=[{id:'agenda',l:'Agenda',i:'agenda'},{id:'ponentes',l:'Ponentes',i:'people'},{id:'feria',l:'Feria',i:'feria'},{id:'albacete',l:'Albacete',i:'city'},{id:'info',l:'Info',i:'info'}];
+
+/* ============ RENDER ============ */
+function renderTabs(){
+  $('#tabs').innerHTML=TABS.map(t=>`<button class="tab" role="tab" id="tab-${t.id}" aria-selected="${state.tab===t.id}" data-tab="${t.id}">${I[t.i]}<span>${t.l}</span></button>`).join('');
+}
+function setTab(id){state.tab=id;try{localStorage.setItem('cc26.tab',id)}catch(e){};renderTabs();render();window.scrollTo({top:0})}
+
+function header(k,h,sub){$('#topbar').innerHTML=`<div class="kicker">${k}</div><h1>${h}</h1>${sub?`<div class="sub">${sub}</div>`:''}`}
+
+function pills(roles,limitRoles){
+  return Object.entries(roles||{}).filter(([r])=>!limitRoles||limitRoles.includes(r)).flatMap(([r,ids])=>ids.map(id=>{const p=person(id);
+    return `<span class="pill"><span class="av" style="background:${avColor(p.n)}">${initials(p.n)}</span><span class="r">${ROLE_SHORT[r]}</span><span class="n">${esc(p.n)}</span></span>`})).join('');
+}
+function speakersLine(roles){
+  const parts=[];const order=['caso','pon','exp'];
+  order.forEach(r=>{(roles[r]||[]).forEach(id=>{const p=person(id);parts.push(`<span><b>${esc(p.n)}</b> <span style="color:var(--ink3)">· ${ROLE_SHORT[r]}</span></span>`)})});
+  return parts.join('<br>');
+}
+function starBtn(id){const on=favs.has(id);return `<button class="star" data-fav="${id}" aria-pressed="${on}" aria-label="${on?'Quitar de mi agenda':'Guardar en mi agenda'}">${on?I.star:I.starO}</button>`}
+
+function renderAgenda(){
+  const day=DAYS.find(d=>d.id===state.day);const now=madridNow();const isToday=now.date===day.d;
+  header('V Congreso · Controversias en cardioagudos','Cardiocete 2026',`${VENUE.name} · Albacete · 11–12 sept`);
+  const items=PROGRAM.filter(b=>b.day===state.day);
+  let html=`<div class="toolbar">
+    <div class="seg" role="group" aria-label="Día">${DAYS.map(d=>`<button data-day="${d.id}" aria-pressed="${d.id===state.day}">${d.label} ${d.num}<small>${d.id==='vie'?'16:45 – 20:30':'09:00 – 21:30'}</small></button>`).join('')}</div>
+    <button class="chip-btn" id="favToggle" aria-pressed="${state.onlyFavs}">${I.star.replace('<svg','<svg width="14" height="14"')} Mi agenda</button>
+  </div>`;
+
+  // Ahora / siguiente
+  if(isToday){
+    const flat=ALL.filter(x=>x.day===state.day && !x.isBlock);
+    const cur=flat.find(x=>toMin(x.s)<=now.min && now.min<toMin(x.e));
+    const next=flat.find(x=>toMin(x.s)>now.min);
+    if(cur||next){
+      html+=`<div class="section"><div class="now fade">${I.heart.replace('<svg','<svg class="heart"')}
+        <div class="lbl"><span class="dot"></span>${cur?'Ahora mismo':'A continuación'} · ${now.time}</div>
+        <h3>${esc((cur||next).title)}</h3>
+        <p>${(cur||next).s}–${(cur||next).e}${(cur||next).block?' · '+esc((cur||next).block.title):''}</p>
+        ${cur&&next?`<div class="next">Siguiente <b>${next.s}</b> · ${esc(next.title)}</div>`:''}
+      </div></div>`;
+    }else if(now.min>=toMin(flat[flat.length-1].e)){
+      html+=`<div class="section"><div class="glass card" style="text-align:center;color:var(--ink2)">Jornada del ${day.label.toLowerCase()} finalizada${state.day==='vie'?'. Mañana empezamos a las 09:00.':'. ¡Gracias por venir a Cardiocete!'}</div></div>`;
+    }
+  }else if(!todayDay()&&now.date<'2026-09-11'){
+    const ms=new Date('2026-09-11T16:45:00+02:00')-new Date();const dd=Math.ceil(ms/864e5);
+    html+=`<div class="section"><div class="now">${I.heart.replace('<svg','<svg class="heart"')}<div class="lbl">Cuenta atrás</div><h3>${dd===1?'Mañana':dd+' días'} para la inauguración</h3><p>Viernes 11 de septiembre · 16:45 h · ${VENUE.name}</p></div></div>`;
+  }
+
+  html+=`<div class="section stack" id="timeline">`;
+  let any=false;
+  items.forEach(b=>{
+    if(b.type==='plain'){
+      if(state.onlyFavs && !favs.has(b.id)) return; any=true;
+      const past=isToday&&now.min>=toMin(b.e);
+      html+=`<button class="glass plain sess-open ${past?'past':''}" data-open="${b.id}" style="width:100%;text-align:left"><span class="ic ${b.color}">${b.icon}</span><span class="t">${b.s}</span><span class="ti">${esc(b.title)}${b.sub?`<small>${esc(b.sub)}</small>`:''}</span></button>`;
+      return;
+    }
+    const sess=b.sessions.filter(x=>!state.onlyFavs||favs.has(x.id));
+    if(state.onlyFavs && !sess.length && !favs.has(b.id)) return; any=true;
+    const bpast=isToday&&now.min>=toMin(b.e);
+    html+=`<div class="glass block ${bpast?'past':''}">
+      <button class="block-head sess-open" data-open="${b.id}" style="width:100%;text-align:left;display:block">
+        <div class="time">${b.s} – ${b.e}</div>
+        <h3><span class="kind">${b.kind}</span>${esc(b.title)}</h3>
+        <div class="people">${pills(b.roles)}</div>
+      </button>`;
+    sess.forEach(x=>{
+      const live=isToday&&toMin(x.s)<=now.min&&now.min<toMin(x.e);const past=isToday&&now.min>=toMin(x.e);
+      html+=`<div class="sess ${live?'live':''} ${past?'past':''}">
+        <button class="t sess-open" data-open="${x.id}" style="text-align:left">${x.s}<small>${x.e}</small></button>
+        <button class="sess-open" data-open="${x.id}" style="text-align:left"><div class="ti">${esc(x.title)}</div>${Object.keys(x.roles).length?`<div class="sp">${speakersLine(x.roles)}</div>`:''}</button>
+        ${starBtn(x.id)}
+      </div>`;
+    });
+    if(!b.sessions.length){
+      html+=`<div class="sess" style="grid-template-columns:1fr 36px"><div><div class="sp" style="margin-top:0">${b.kind==='Concurso'?'Presentación y defensa de casos clínicos por residentes y adjuntos ante el jurado.':'Conversación abierta con los expertos, café en mano.'}</div></div>${starBtn(b.id)}</div>`;
+    }
+    html+=`</div>`;
+  });
+  if(!any) html+=`<div class="glass empty"><b>Todavía no has guardado nada</b>Toca la estrella de una sesión para montar tu agenda del ${day.label.toLowerCase()}.</div>`;
+  html+=`</div><p class="note">Horarios según el programa científico oficial. Toca cualquier sesión para ver ponentes, guardarla o añadirla a tu calendario.</p>`;
+  $('#view').innerHTML=html;
+}
+
+function renderPonentes(){
+  header('Quién es quién','Ponentes',`${SPEAKER_LIST.length} profesionales · ${CITIES.length-1} ciudades`);
+  const q=state.q.trim().toLowerCase();
+  const list=SPEAKER_LIST.filter(s=>(state.pf==='Todos'||CITY(s.o)===state.pf)&&(!q||(s.n+' '+s.o).toLowerCase().includes(q)));
+  let html=`<div class="section" style="margin-top:8px"><div class="search">${I.search}<input id="q" type="search" placeholder="Buscar por nombre u hospital" value="${esc(state.q)}" autocomplete="off"></div>
+  <div class="filters">${CITIES.map(c=>`<button class="chip-btn" data-pf="${esc(c)}" aria-pressed="${state.pf===c}">${esc(c)}</button>`).join('')}</div></div>
+  <div class="section glass" style="margin-top:8px">`;
+  if(!list.length) html+=`<div class="empty"><b>Sin resultados</b>Prueba con el apellido o con la ciudad del hospital.</div>`;
+  list.forEach(s=>{html+=`<button class="row" data-sp="${s.id}"><span class="av-lg" style="background:${avColor(s.n)}">${initials(s.n)}</span><span><div class="n">${esc(s.n)}</div><div class="o">${esc(s.o)}</div></span><span class="c" aria-label="${s.items.length} intervenciones">${s.items.length}</span></button>`});
+  html+=`</div>`;
+  $('#view').innerHTML=html;
+  const inp=$('#q'); if(inp&&q){inp.focus();inp.setSelectionRange(inp.value.length,inp.value.length)}
+}
+
+function renderFeria(){
+  header('Interés Turístico Internacional','Feria de Albacete','7 – 17 de septiembre · en honor a la Virgen de los Llanos');
+  const now=madridNow();const dayN=Math.floor((new Date(now.date)-new Date('2026-09-07'))/864e5)+1;
+  let html=`<div class="section" style="margin-top:8px"><div class="glass hero">
+    <div class="eyebrow">${dayN>=1&&dayN<=11?`Día ${dayN} de 11 de Feria`:'Más de 300 años de historia'}</div>
+    <h3>El congreso cae en plena Feria. Aprovéchalo.</h3>
+    <p>El Recinto Ferial abre todos los días con entrada gratuita, a 15–20 minutos a pie del centro por la calle Feria y el Paseo de la Feria. Las noches del viernes y el sábado son las más fuertes.</p>
+    <div class="stats"><div class="stat"><b>1710</b><span>Primera Feria</span></div><div class="stat"><b>~400</b><span>Actividades</span></div><div class="stat"><b>0 €</b><span>Entrada al Recinto</span></div></div>
+    <div class="btn-row"><a class="btn primary" href="${mapsQ('Recinto Ferial de Albacete')}" target="_blank" rel="noopener">Ir al Recinto Ferial</a><a class="btn" href="https://www.feriadealbacete.com/" target="_blank" rel="noopener">Programa oficial</a></div>
+  </div></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Estos días</h2><span class="meta">viernes a domingo</span></div><div class="stack">`;
+  FERIA_DAYS.forEach(fd=>{
+    const isT=fd.date===now.date;
+    html+=`<div class="glass block"><div class="block-head"><div class="time">${isT?'HOY · ':''}${fd.d.toUpperCase()} DE SEPTIEMBRE</div></div>${fd.ev.map(e=>`<div class="event"><div class="t">${e.t}</div><div><div class="ti">${esc(e.ti)}</div><div class="w">${esc(e.w)}</div></div></div>`).join('')}</div>`;
+  });
+  html+=`</div><p class="note">Horarios publicados por la organización de la Feria; algunas fuentes indican las corridas a las 18:30. Confirma en <a href="https://www.plazatorosalbacete.com" target="_blank" rel="noopener">plazatorosalbacete.com</a> y en el programa oficial.</p></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Todos los conciertos</h2><span class="meta">Jardinillos · Carpa VIVA</span></div><div class="glass scroll-x"><table class="table"><thead><tr><th>Día</th><th>Artista</th><th>Dónde</th><th></th></tr></thead><tbody>`;
+  CONCERTS.forEach(([d,t,a,w,f])=>{const hl=['11','12','13'].includes(d);html+=`<tr class="${hl?'hl':''}"><td class="d">${d} sept<small>${t}</small></td><td><b>${esc(a)}</b></td><td>${esc(w)}</td><td><span class="tag ${f}">${f==='free'?'Gratis':'Entrada'}</span></td></tr>`});
+  html+=`</tbody></table></div><p class="note">Caseta de los Jardinillos: junto al Recinto. Carpa VIVA: pistas del CEIP Feria–Isabel Bonal. Dani Martín (sáb 12) es en el Estadio José Copete.</p></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Cómo moverse</h2></div><div class="glass">
+    <div class="irow"><span class="ic blue">🚶</span><span><div class="l">A pie</div><div class="v">15–20 min desde el centro<small>Por la calle Feria y el Paseo de la Feria. Desde la sede del congreso es un paseo llano.</small></div></span><span></span></div>
+    <div class="irow"><span class="ic green">🚌</span><span><div class="l">Autobús</div><div class="v">Líneas especiales F-1, F-2, F-3 y F-4<small>Paradas junto al Recinto durante toda la Feria.</small></div></span><span></span></div>
+    <div class="irow"><span class="ic gold">🅿️</span><span><div class="l">Aparcar</div><div class="v">Gratis en Imaginalia, San Antonio Abad, Universidad e IFAB<small>Con lanzaderas al Recinto del 11 al 13. En el centro, olvídate del coche.</small></div></span><span></span></div>
+    <div class="irow"><span class="ic violet">🚕</span><span><div class="l">Taxi</div><div class="v">Mejor desde la estación o zonas periféricas<small>Las noches fuertes hay cola en las paradas del Recinto.</small></div></span><span></span></div>
+  </div></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>El Recinto, por dentro</h2></div><div class="glass card prose">
+    <p><b>Puerta de Hierros.</b> La entrada principal: se abre a medianoche del 7 y se cierra a medianoche del 17 con un piromusical.</p>
+    <p><b>Los Redondeles.</b> Los anillos concéntricos de casetas que dan al Recinto su forma de sartén. Aquí está el tapeo, las peñas y el ambiente. El sábado 12 se celebra la XV Ronda de los Redondeles.</p>
+    <p><b>El Templete y la Ermita.</b> El centro del círculo, con la capilla de la Virgen de los Llanos. El domingo 13 la Ofrenda de Flores termina aquí.</p>
+    <p><b>Ejidos y Paseo de la Feria.</b> Las atracciones, los puestos y el paseo hasta los Jardinillos.</p>
+  </div></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Qué comer y beber</h2></div><div class="glass">${TYPICAL.map(([n,d])=>`<div class="irow" style="grid-template-columns:1fr"><span><div class="v">${esc(n)}<small>${esc(d)}</small></div></span></div>`).join('')}</div></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Consejos de local</h2></div><div class="glass card prose">
+    <p>Cena pronto o reserva: viernes y sábado de Feria los restaurantes del centro van llenos y muchos trabajan solo con reserva.</p>
+    <p>La cena de clausura es el sábado a las 21:30. Si quieres Recinto después, ese es el momento: el ambiente de los Redondeles empieza a partir de medianoche.</p>
+    <p>Hay Punto Violeta, zonas de descanso sensorial y préstamo de sillas de ruedas en el Recinto.</p>
+    <p>Las vaquillas de la Plaza de Toros son por la mañana temprano. El sábado te coinciden con la mesa de SCA, así que toca elegir.</p>
+  </div></div>`;
+  $('#view').innerHTML=html;
+}
+
+function renderAlbacete(){
+  header('Ciudad de la cuchillería','Albacete','Qué ver, dónde comer y dónde dormir');
+  let html=`<div class="section" style="margin-top:8px"><div class="section-title"><h2>Qué ver</h2><span class="meta">a pie desde la sede</span></div><div class="glass">`;
+  SIGHTS.forEach(s=>{html+=`<div class="place"><div><span class="k">${esc(s.k)}</span><div class="n">${esc(s.n)}</div><div class="d">${esc(s.d)}</div></div><a class="map-btn" href="${mapsQ(s.q)}" target="_blank" rel="noopener" aria-label="Abrir en Maps">📍</a></div>`});
+  html+=`</div></div>`;
+  html+=`<div class="section"><div class="section-title"><h2>Dónde comer</h2><span class="meta">reserva en Feria</span></div><div class="glass">`;
+  FOOD.forEach(s=>{html+=`<div class="place"><div><div class="n">${esc(s.n)}</div><div class="d">${esc(s.d)}</div></div><a class="map-btn" href="${mapsQ(s.q)}" target="_blank" rel="noopener" aria-label="Abrir en Maps">📍</a></div>`});
+  html+=`</div><p class="note">Referencias clásicas de la ciudad. En Feria cambian horarios y aforos: comprueba en Maps antes de ir.</p></div>`;
+  html+=`<div class="section"><div class="section-title"><h2>Hoteles oficiales del congreso</h2></div><div class="glass">`;
+  HOTELS.forEach(h=>{html+=`<div class="place"><div><span class="k">${h.stars}</span><div class="n">${esc(h.n)}</div><div class="d">${esc(h.addr)}<br><a href="tel:+34${h.tel}">${h.tel.replace(/(\d{3})(\d{3})(\d{3})/,'$1 $2 $3')}</a> · <a href="${h.web}" target="_blank" rel="noopener">web</a></div></div><a class="map-btn" href="${mapsQ(h.n+' Albacete')}" target="_blank" rel="noopener" aria-label="Abrir en Maps">📍</a></div>`});
+  html+=`</div></div>`;
+  $('#view').innerHTML=html;
+}
+
+function renderInfo(){
+  header('Información práctica','Sede y contacto','V Congreso de Cardiología de Albacete');
+  const dir=`https://www.google.com/maps/dir/?api=1&destination=${VENUE.lat},${VENUE.lng}`;
+  let html=`<div class="section" style="margin-top:8px"><div class="glass hero">
+    <div class="eyebrow">Sede</div><h3>${VENUE.name}</h3><p>${esc(VENUE.addr)}<br>Junto a la plaza de San José de Calasanz, en pleno centro. A 3 minutos a pie de la Catedral.</p>
+    <div class="btn-row"><a class="btn primary" href="${dir}" target="_blank" rel="noopener">Cómo llegar</a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=${VENUE.lat}%2C${VENUE.lng}" target="_blank" rel="noopener">Ver en el mapa</a></div>
+  </div></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Fechas y horarios</h2></div><div class="glass">
+    <div class="irow"><span class="ic red">📅</span><span><div class="l">Viernes 11</div><div class="v">16:45 – 20:30<small>Inauguración, cuidados críticos, shock, café con el experto e intervencionismo</small></div></span><span></span></div>
+    <div class="irow"><span class="ic red">📅</span><span><div class="l">Sábado 12</div><div class="v">09:00 – 19:30 · cena 21:30<small>SCA, arritmias, insuficiencia cardíaca, post-SCA y concurso de casos clínicos</small></div></span><span></span></div>
+  </div></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Secretaría técnica</h2></div><div class="glass">
+    <a class="irow" href="mailto:Cardiocete26@fundacionbiotyc.org"><span class="ic blue">✉️</span><span><div class="l">Email</div><div class="v" style="font-size:14px">Cardiocete26@fundacionbiotyc.org</div></span><span class="go">›</span></a>
+    <a class="irow" href="tel:+34604446494"><span class="ic green">📞</span><span><div class="l">Teléfono</div><div class="v">604 446 494</div></span><span class="go">›</span></a>
+    <a class="irow" href="https://congresocardiocete.es/" target="_blank" rel="noopener"><span class="ic violet">🌐</span><span><div class="l">Web</div><div class="v">congresocardiocete.es</div></span><span class="go">›</span></a>
+    <a class="irow" href="https://twitter.com/cardiocete" target="_blank" rel="noopener"><span class="ic grey">𝕏</span><span><div class="l">Redes</div><div class="v">@cardiocete<small>También en LinkedIn y Facebook</small></div></span><span class="go">›</span></a>
+  </div><p class="note">Organizan Fundación BIOTYC y Globalite Gestión Global SL.</p></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Inscripción</h2><span class="meta">IVA incluido</span></div><div class="glass scroll-x"><table class="table"><thead><tr><th>Modalidad</th><th>Inscripción</th><th>Alojamiento</th><th>Pack</th></tr></thead><tbody>
+    <tr><td><b>Adjunto / especialista</b></td><td class="d">450 €</td><td class="d">500 €</td><td class="d">800 €</td></tr>
+    <tr><td><b>Residente MIR</b></td><td class="d">350 €</td><td class="d">500 €</td><td class="d">700 €</td></tr>
+  </tbody></table></div><p class="note">Incluye documentación, acceso a las sesiones científicas, almuerzo de trabajo, cafés y cena de clausura.</p></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Comité organizador y científico</h2></div><div class="glass">${COMMITTEE.map(([n,r])=>`<div class="row" style="grid-template-columns:44px 1fr"><span class="av-lg" style="background:${avColor(n)}">${initials(n)}</span><span><div class="n">${esc(n)}</div><div class="o">${esc(r)}</div></span></div>`).join('')}</div><p class="note">Servicio de Cardiología del Complejo Hospitalario Universitario de Albacete y Fundación BIOTYC.</p></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Patrocinadores</h2></div><div class="glass card"><div class="badges">${SPONSORS.map(s=>`<span class="badge">${esc(s)}</span>`).join('')}</div>
+    <div class="l" style="font-size:12px;color:var(--ink3);font-weight:600;letter-spacing:.03em;text-transform:uppercase;margin:14px 0 8px">Con el apoyo de</div>
+    <div class="badges">${SUPPORT.map(s=>`<span class="badge">${esc(s)}</span>`).join('')}</div></div></div>`;
+
+  html+=`<div class="section"><div class="section-title"><h2>Comparte la guía</h2></div><div class="glass card" style="text-align:center">
+    <div style="display:inline-block;padding:12px;border-radius:18px;background:#fff;box-shadow:0 6px 20px -8px rgba(0,0,0,.25)"><svg viewBox="0 0 ${QR_W} ${QR_W}" width="180" height="180" shape-rendering="crispEdges" role="img" aria-label="Código QR de la guía"><path fill="#1C1C1E" d="${QR_PATH}"/></svg></div>
+    <p style="margin:12px 0 0;font-size:14px;color:var(--ink2)">Que lo escaneen con la cámara y se abre la guía. Sin instalar nada.</p>
+    <div class="btn-row"><button class="btn primary" id="copyLink">Copiar enlace</button>${navigator.share?`<button class="btn" id="shareApp">Compartir</button>`:`<a class="btn" href="${APP_URL}" target="_blank" rel="noopener">Abrir enlace</a>`}</div>
+  </div></div>`;
+
+  html+=`<div class="section"><div class="glass card" style="font-size:13px;color:var(--ink2);line-height:1.5">
+    <b style="color:var(--ink)">Sobre esta guía.</b> Programa científico tomado del programa oficial de Cardiocete 2026. Sede, hoteles, tarifas y contacto de congresocardiocete.es. Feria: feriadealbacete.com y programas publicados a 11 de septiembre de 2026. Tus sesiones guardadas se quedan en este dispositivo.
+  </div></div>`;
+  $('#view').innerHTML=html;
+}
+
+function render(){
+  const v=$('#view'); v.classList.remove('fade'); void v.offsetWidth;
+  ({agenda:renderAgenda,ponentes:renderPonentes,feria:renderFeria,albacete:renderAlbacete,info:renderInfo})[state.tab]();
+  v.classList.add('fade');
+}
+
+/* ============ SHEET ============ */
+function openSheet(html){$('#sheet').innerHTML=`<div class="handle"></div>${html}`;$('#sheet').classList.add('open');$('#sheetBd').classList.add('open');$('#sheet').scrollTop=0;document.body.style.overflow='hidden'}
+function closeSheet(){$('#sheet').classList.remove('open');$('#sheetBd').classList.remove('open');document.body.style.overflow=''}
+function findItem(id){return ALL.find(x=>x.id===id)||PROGRAM.find(b=>b.id===id)}
+function sheetSession(id){
+  const x=findItem(id); if(!x) return;
+  const day=DAYS.find(d=>d.id===x.day);
+  const block=x.block||(x.type==='block'?x:null);
+  const isBlockOnly=x.type==='block'||x.isBlock;
+  const title=x.title; const roles=x.roles||{};
+  const details=`${block&&!isBlockOnly?block.kind+': '+block.title+'\n':''}Cardiocete 2026 · ${VENUE.name}`;
+  let h=`<div class="k">${day.label} ${day.num} · ${x.s}–${x.e}${block&&!isBlockOnly?' · '+esc(block.kind):''}</div><h3>${esc(title)}</h3>`;
+  if(block&&!isBlockOnly) h+=`<div class="m">Dentro de la mesa «${esc(block.title)}»</div>`;
+  if(x.sub) h+=`<div class="m">${esc(x.sub)}</div>`;
+  const groups=[['caso','pon','exp'],['mod','pan']];
+  const src=isBlockOnly?(x.roles||block.roles):roles;
+  const rolesToShow=isBlockOnly?src:roles;
+  const rows=order=>Object.entries(rolesToShow).filter(([r])=>order.includes(r)).sort((a,b)=>order.indexOf(a[0])-order.indexOf(b[0])).flatMap(([r,ids])=>ids.map(pid=>{const p=person(pid);return `<button class="prow" data-sp="${pid}" style="width:100%;text-align:left"><span class="av-lg" style="width:38px;height:38px;font-size:13px;background:${avColor(p.n)}">${initials(p.n)}</span><span><div class="rr">${ROLE_LABEL[r]}</div><div class="n">${esc(p.n)}</div><div class="o">${esc(p.o)}</div></span></button>`})).join('');
+  const r1=rows(groups[0]); if(r1) h+=`<div class="grp"><h4>Intervienen</h4>${r1}</div>`;
+  if(isBlockOnly){const r2=rows(groups[1]); if(r2) h+=`<div class="grp"><h4>Moderan y panel</h4>${r2}</div>`}
+  else if(block){const r2=Object.entries(block.roles).flatMap(([r,ids])=>ids.map(pid=>{const p=person(pid);return `<button class="prow" data-sp="${pid}" style="width:100%;text-align:left"><span class="av-lg" style="width:38px;height:38px;font-size:13px;background:${avColor(p.n)}">${initials(p.n)}</span><span><div class="rr">${ROLE_LABEL[r]}</div><div class="n">${esc(p.n)}</div><div class="o">${esc(p.o)}</div></span></button>`})).join(''); if(r2) h+=`<div class="grp"><h4>Moderan y panel de la mesa</h4>${r2}</div>`}
+  const favable=x.type!=='plain'||true;
+  const on=favs.has(id);
+  h+=`<div class="btn-row"><button class="btn ${on?'':'primary'}" data-fav="${id}" id="sheetFav">${on?'★ En mi agenda':'☆ Guardar en mi agenda'}</button>
+      <a class="btn" href="${gcal(title,day.d,x.s,x.e==='23:59'?'23:30':x.e,details,VENUE.name+', '+VENUE.addr)}" target="_blank" rel="noopener">Añadir al calendario</a></div>`;
+  if(navigator.share) h+=`<button class="btn" style="width:100%;margin-top:8px" id="shareBtn" data-share="${esc(`${title} · ${day.label} ${day.num} ${x.s}–${x.e} · Cardiocete 2026`)}">Compartir sesión</button>`;
+  openSheet(h);
+}
+function sheetSpeaker(pid){
+  const s=SPEAKERS[pid]; if(!s) return;
+  let h=`<div style="display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center"><span class="av-lg" style="width:56px;height:56px;font-size:19px;background:${avColor(s.n)}">${initials(s.n)}</span><div><h3 style="margin:0">${esc(s.n)}</h3><div class="m">${esc(s.o)}</div></div></div>`;
+  const items=[...s.items].sort((a,b)=>(a.day+a.s).localeCompare(b.day+b.s));
+  h+=`<div class="grp"><h4>${items.length===1?'Su intervención':'Sus intervenciones'}</h4>`;
+  items.forEach(it=>{const d=DAYS.find(x=>x.id===it.day);h+=`<button class="srow" data-open="${it.sid}"><span class="t">${d.short} ${d.num}<br>${it.s}<small>${ROLE_SHORT[it.role]}</small></span><span><div class="ti">${esc(it.title)}</div><div class="ro">${it.block?'Mesa completa':''}${it.block?' · ':''}${it.s}–${it.e}</div></span></button>`});
+  h+=`</div>`;
+  openSheet(h);
+}
+
+/* ============ EVENTS ============ */
+document.addEventListener('click',e=>{
+  const tab=e.target.closest('[data-tab]'); if(tab){setTab(tab.dataset.tab);return}
+  const day=e.target.closest('[data-day]'); if(day){state.day=day.dataset.day;render();return}
+  if(e.target.closest('#favToggle')){state.onlyFavs=!state.onlyFavs;render();return}
+  const fav=e.target.closest('[data-fav]'); if(fav){const id=fav.dataset.fav;const on=favs.has(id);on?favs.delete(id):favs.add(id);saveFavs();toast(on?'Quitada de tu agenda':'Guardada en tu agenda');
+    if(fav.id==='sheetFav'){fav.textContent=on?'☆ Guardar en mi agenda':'★ En mi agenda';fav.classList.toggle('primary',on)}
+    if(state.tab==='agenda')render(); return}
+  const sp=e.target.closest('[data-sp]'); if(sp){sheetSpeaker(sp.dataset.sp);return}
+  const op=e.target.closest('[data-open]'); if(op){sheetSession(op.dataset.open);return}
+  const pf=e.target.closest('[data-pf]'); if(pf){state.pf=pf.dataset.pf;render();return}
+  if(e.target.closest('#sheetBd')){closeSheet();return}
+  if(e.target.closest('#copyLink')){(navigator.clipboard?navigator.clipboard.writeText(APP_URL):Promise.reject()).then(()=>toast('Enlace copiado')).catch(()=>{prompt('Copia el enlace',APP_URL)});return}
+  if(e.target.closest('#shareApp')){navigator.share({title:'Cardiocete 2026',text:'Guía del congreso Cardiocete 2026',url:APP_URL}).catch(()=>{});return}
+  const sh=e.target.closest('#shareBtn'); if(sh){navigator.share({title:'Cardiocete 2026',text:sh.dataset.share}).catch(()=>{});return}
+});
+document.addEventListener('input',e=>{if(e.target.id==='q'){state.q=e.target.value;renderPonentes()}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet()});
+// swipe down to close sheet
+(()=>{let y0=null;const sh=$('#sheet');sh.addEventListener('touchstart',e=>{y0=sh.scrollTop<=0?e.touches[0].clientY:null},{passive:true});
+sh.addEventListener('touchmove',e=>{if(y0!==null&&e.touches[0].clientY-y0>70){closeSheet();y0=null}},{passive:true})})();
+
+renderTabs();render();
+setInterval(()=>{if(state.tab==='agenda'&&!$('#sheet').classList.contains('open'))render()},60000);
+</script>
+
+</body>
+</html>
